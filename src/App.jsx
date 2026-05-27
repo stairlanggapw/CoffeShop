@@ -1,12 +1,13 @@
 import { useState } from 'react'
-import navbar from './components/Navbar'
 import Navbar from './components/Navbar'
+import Homepage from './components/Homepage'
 
 function App() {
 
   return (
     <>
       <Navbar/>
+      <Homepage/>
     </>
   )
 }
