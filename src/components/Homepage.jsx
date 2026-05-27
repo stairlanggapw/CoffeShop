@@ -7,7 +7,7 @@ const Homepage = () => {
       <div className='max-w-7xl mx-auto px-8 flex items-center justify-between min-h-screen'>
         <div className='max-w-xl'>
           <img className='w-72 mb-6' src={assets.title} alt="title" />
-          <h1 className='text-6xl font-bold leading-tight mb-4'>
+          <h1 className='text-5xl font-bold leading-tight mb-4'>
             An Online Coffee Store
           </h1>
           <p className='text-gray-600 text-lg mb-8'>
