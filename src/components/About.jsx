@@ -3,7 +3,7 @@ import assets from "../assets/assets";
 
 const About = () => {
   return (
-    <section className='w-full py-24 bg-[#f5f5f5] overflow-hidden'>
+    <section className='w-full py-24 bg-[#f5f5f5] overflow-hidden' id='about'>
       <div className='max-w-7xl mx-auto px-10 flex items-center justify-between gap-20'>
         <div className='flex-1 flex justify-center '>
           <img
