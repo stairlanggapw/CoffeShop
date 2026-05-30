@@ -12,13 +12,13 @@ function App() {
     <>
       <Navbar/>
       <Homepage/>
-      <div className=''>
+      {/* <div className='flex justify-between h-[55px]'>
         <img 
           className="flex justify-between items-center -mt-24"
           src={assets.banner1}
           alt="" 
         />
-      </div>
+      </div> */}
       <About/>
       <div
         className='bg-cover bg-center w-full h-[500px]'
@@ -27,6 +27,13 @@ function App() {
         <Menu />
       </div>
       <Gallery/>
+      {/* <div className='flex justify-between h-[55px]'>
+        <img 
+          className="flex justify-between items-center -mb-30"
+          src={assets.banner1}
+          alt="" 
+        />
+      </div> */}
     </>
   )
 }
