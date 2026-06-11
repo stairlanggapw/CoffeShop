@@ -1,39 +1,48 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Loading from './components/Loading'
 import Navbar from './components/Navbar'
 import Homepage from './components/Homepage'
+import ChooseUs from './components/ChooseUs'
 import About from './components/About'
 import Menu from './components/Menu'
 import Gallery from './components/Gallery'
+import Testimonial from './components/Testimonial'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 import assets from './assets/assets'
 
 function App() {
 
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 4000)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (loading) {
+    return <Loading />
+  }
+
   return (
     <>
-      <Navbar/>
-      <Homepage/>
-      {/* <div className='flex justify-between h-[55px]'>
-        <img 
-          className="flex justify-between items-center -mt-24"
-          src={assets.banner1}
-          alt="" 
-        />
-      </div> */}
-      <About/>
       <div
-        className='bg-cover bg-center w-full h-[500px]'
-        style={{ backgroundImage: `url(${assets.wallpaper})` }}
+        className='bg-cover bg-center w-full h-[700px]'
+        style={{ backgroundImage: `url(${assets.bg1})`}}
       >
-        <Menu />
+        <Navbar/>
+        <Homepage/>
       </div>
+      <ChooseUs />
+      <About/>
+      <Menu />
       <Gallery/>
-      {/* <div className='flex justify-between h-[55px]'>
-        <img 
-          className="flex justify-between items-center -mb-30"
-          src={assets.banner1}
-          alt="" 
-        />
-      </div> */}
+      <Testimonial/>
+      <Contact/>
+      <Footer/>
     </>
   )
 }

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 * {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .navbar{
@@ -15,3 +15,4 @@
 .navbar-show{
   transform: translateY(0);
 }
+
