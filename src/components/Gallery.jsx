@@ -14,7 +14,7 @@ const Gallery = () => {
   return (
     <section
       id='gallery'
-      className='w-full h-[100vh] py-24 bg-[#f8f4ef] overflow-hidden'
+      className='w-full py-24 bg-[#f8f4ef] overflow-hidden'
     >
       <div className='max-w-7xl mx-auto px-10'>
         <motion.div

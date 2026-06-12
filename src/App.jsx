@@ -29,13 +29,8 @@ function App() {
 
   return (
     <>
-      <div
-        className='bg-cover bg-center w-full h-[700px]'
-        style={{ backgroundImage: `url(${assets.bg1})`}}
-      >
-        <Navbar/>
-        <Homepage/>
-      </div>
+      <Navbar/>
+      <Homepage/>
       <ChooseUs />
       <About/>
       <Menu />
