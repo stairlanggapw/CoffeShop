@@ -53,7 +53,7 @@ function Testimonial() {
       id='testimonial'
       className='py-28 bg-white overflow-hidden'
     >
-      <div className='max-w-7xl mx-auto px-8'>
+      <div className='max-w-6xl mx-auto px-8'>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

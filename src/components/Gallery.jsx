@@ -26,12 +26,12 @@ const Gallery = () => {
         >
           <h1 className='text-5xl font-serif mb-6'>Photo Gallery</h1>
           <div className='w-52 h-[2px] bg-[#b7774f] mb-6'></div>
-          <p className='text-gray-700 text-2xl max-w-2xl leading-relaxed'>
+          <p className='text-gray-700 text-xl max-w-2xl leading-relaxed'>
             A glimpse of our cozy space, crafted coffee, and warm moments.
           </p>
         </motion.div>
 
-        <div className='grid grid-cols-3 grid-rows-2 gap-6 h-[800px]'>
+        <div className='grid grid-cols-3 grid-rows-2 gap-6 h-[610px]'>
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}
