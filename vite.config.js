@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base: '/CoffeShop/',
   plugins: [
-    react(),
+    react(), 
     tailwindcss()
   ],
 })
