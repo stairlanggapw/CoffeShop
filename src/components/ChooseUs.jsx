@@ -31,21 +31,20 @@ function WhyChooseUs() {
   return (
     <section className='py-32 bg-white' id='why-us'>
       <div className='max-w-7xl mx-auto px-8'>
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           className='text-center mb-16'
         >
           <p className='text-[#b7774f] tracking-[5px] text-sm font-medium mb-4'>
             WHY CHOOSE US
           </p>
-
           <h1 className='text-5xl font-bold font-serif mb-5'>
             Crafted For Every Coffee Moment
           </h1>
-
           <p className='text-gray-500 max-w-2xl mx-auto'>
             More than just coffee, we create experiences that bring comfort, quality, and connection in every visit.
           </p>
@@ -55,27 +54,27 @@ function WhyChooseUs() {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 80 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{
-                duration: 0.7,
-                delay: index * 0.15
+                duration: 0.6,
+                delay: index * 0.12,
+                ease: 'easeOut'
               }}
-              whileHover={{
-                y: -10
-              }}
+              whileHover={{ y: -10 }}
               className='bg-[#faf7f2] rounded-[30px] p-8 text-center border-4 border-[#eadfd6] shadow-lg'
             >
               <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{
-                  duration: 0.5,
-                  delay: index * 0.15 + 0.2
+                  duration: 0.4,
+                  delay: index * 0.12 + 0.15
                 }}
                 className='w-18 h-18 mx-auto mb-6 rounded-full bg-[#b7774f]/10 flex items-center justify-center text-4xl text-[#b7774f]'
+                style={{ willChange: 'opacity' }}
               >
                 {feature.icon}
               </motion.div>
@@ -83,13 +82,13 @@ function WhyChooseUs() {
               <h3 className='text-xl font-bold mb-3'>
                 {feature.title}
               </h3>
-
               <p className='text-gray-500 leading-relaxed'>
                 {feature.description}
               </p>
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   )

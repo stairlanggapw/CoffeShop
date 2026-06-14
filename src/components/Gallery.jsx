@@ -3,13 +3,19 @@ import { motion } from 'framer-motion'
 import assets from '../assets/assets'
 
 const Gallery = () => {
-
   const images = [
     assets.img1,
     assets.img2,
     assets.img3,
     assets.img4
   ]
+
+  const fadeUp = (delay = 0) => ({
+    initial: { opacity: 0, y: 40 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, amount: 0.1 },
+    transition: { duration: 0.6, delay, ease: 'easeOut' }
+  })
 
   return (
     <section
@@ -20,8 +26,8 @@ const Gallery = () => {
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           className='mb-16'
         >
           <h1 className='text-5xl font-serif mb-6'>Photo Gallery</h1>
@@ -34,61 +40,62 @@ const Gallery = () => {
         <div className='grid grid-cols-3 grid-rows-2 gap-6 h-[610px]'>
 
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.6 }}
-            className='col-span-2 rounded-[25px] overflow-hidden shadow-xl will-change-transform'
+            {...fadeUp(0)}
+            className='col-span-2 rounded-[25px] overflow-hidden shadow-xl'
+            style={{ willChange: 'transform' }}
           >
             <img
               src={images[0]}
-              alt='img1'
+              alt='Gallery image 1'
               loading='eager'
+              decoding='async'
+              width={800} height={400}
               className='w-full h-full object-cover transition-transform duration-500 hover:scale-105'
             />
           </motion.div>
 
+          {/* Gambar 2 */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className='rounded-[25px] overflow-hidden shadow-xl will-change-transform'
+            {...fadeUp(0.12)}
+            className='rounded-[25px] overflow-hidden shadow-xl'
+            style={{ willChange: 'transform' }}
           >
             <img
               src={images[1]}
-              alt='img2'
-              loading='eager'
+              alt='Gallery image 2'
+              loading='lazy'
+              decoding='async'
+              width={400} height={400}
               className='w-full h-full object-cover transition-transform duration-500 hover:scale-105'
             />
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className='rounded-[25px] overflow-hidden shadow-xl will-change-transform'
+            {...fadeUp(0.24)}
+            className='rounded-[25px] overflow-hidden shadow-xl'
+            style={{ willChange: 'transform' }}
           >
             <img
               src={images[2]}
-              alt='img3'
-              loading='eager'
+              alt='Gallery image 3'
+              loading='lazy'
+              decoding='async'
+              width={400} height={400}
               className='w-full h-full object-cover transition-transform duration-500 hover:scale-105'
             />
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className='col-span-2 rounded-[25px] overflow-hidden shadow-xl will-change-transform'
+            {...fadeUp(0.36)}
+            className='col-span-2 rounded-[25px] overflow-hidden shadow-xl'
+            style={{ willChange: 'transform' }}
           >
             <img
               src={images[3]}
-              alt='img4'
-              loading='eager'
+              alt='Gallery image 4'
+              loading='lazy'
+              decoding='async'
+              width={800} height={400}
               className='w-full h-full object-cover transition-transform duration-500 hover:scale-105'
             />
           </motion.div>

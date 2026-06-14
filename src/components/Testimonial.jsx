@@ -95,8 +95,8 @@ function Testimonial() {
               key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: index * 0.15 }} // ✓ naik dari 0.08 → 0.15
               className='bg-[#faf7f2] rounded-[30px] p-8 border border-[#ede4db] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300'
             >
               <div className='flex items-center gap-4 mb-6'>
@@ -104,6 +104,9 @@ function Testimonial() {
                   src={testimonial.image}
                   alt={testimonial.name}
                   loading='lazy'
+                  decoding='async'
+                  width={64}
+                  height={64}
                   className='w-16 h-16 rounded-full object-cover'
                 />
                 <div>
